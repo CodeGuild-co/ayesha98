@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'posts/get'
   get 'posts/What_Id_Like_To_Get_Out_Of_Villiers_Park'
   get 'posts/Problem_Solving_and_Being_Lazy'
 

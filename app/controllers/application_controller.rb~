@@ -3,11 +3,9 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
   before_action :init
-	
 
   def init
-      
-      @posts = Dir.entries('app/views/posts').keep_if{|path| path.ends_with? ".html.erb"}.map{|filename|
+      posts = Dir.entries('app/views/posts').keep_if{|path| path.ends_with? ".html.erb"}.map{|filename|
 	  y = YAML.load_file('app/views/posts/' + filename)
           y['filename'] = filename.sub('.html.erb', '')
 	  y
