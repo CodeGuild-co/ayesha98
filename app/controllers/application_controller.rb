@@ -6,12 +6,13 @@ class ApplicationController < ActionController::Base
 	
 
   def init
-      
-      @posts = Dir.entries('app/views/posts').keep_if{|path| path.ends_with? ".html.erb"}.map{|filename|
-	  y = YAML.load_file('app/views/posts/' + filename)
-          y['filename'] = filename.sub('.html.erb', '')
-	  y
-      }.sort_by{|p| p["date"]}
+    @posts = Dir.entries('app/views/posts').keep_if{|path|
+			path.ends_with? ".html.erb"
+		}.map{|filename|
+	  	y = YAML.load_file('app/views/posts/' + filename)
+      y['filename'] = filename.sub('.html.erb', '')
+	  	y
+    }.sort_by{|p| p["date"]}
   end
 end
 

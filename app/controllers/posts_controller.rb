@@ -5,4 +5,8 @@ class PostsController < ApplicationController
   end
   def Github_Heroku_Integration
   end
+  def Blog_Features
+  end
+  def Virtual_Machines
+  end
 end
