@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get 'posts/Github_Heroku_Integration'
   get 'posts/Virtual_Machines'
   get 'posts/Blog_Features'
+  
   get 'home/index'
 
   # The priority is based upon order of creation: first created -> highest priority.
