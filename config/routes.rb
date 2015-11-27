@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
-  get 'posts/What_Id_Like_To_Get_Out_Of_Villiers_Park'
+  get 'posts/Making_the_most_of_Villiers_Park'
   get 'posts/Problem_Solving_and_Being_Lazy'
+  get 'posts/Github_Heroku_Integration'
 
   get 'home/index'
 
